@@ -1,17 +1,72 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "First post"
+title: "معامل الباص"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2022"
-heroImage: "/placeholder-hero.jpg"
+pubDate: "Nov 08 2022"
+heroImage: "/images/meeting_loop.gif"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+تخيل معي ان فريق التطوير عندك رايح رحلة ميدانية في باص، وفجأة الباص صار له حادث، إيش راح يصير؟
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+اذا تعتقد ان هذا السؤال سيء او تفائل بالشر، لازم تعرف ان السؤال تم طرحه في عام 1994: إيش راح يصير اذا صدم باص Guido ؟
+الي ما يعرف Guido ، هو مصمم لغة البايثون.
+<br><br>
+Bus Factor:
+السؤل هذا أدى لظهور مصطلح يسمى: عامل الحافلة، وله عدة مسميات مثل: عامل الشاحنة، القطار الخ.. اختار الوسيلة الي تناسبك!
+نستطيع تعريف عامل الحافلة كالتالي:
+كم عدد المطورين الي لازم يكونوا "عاجزين" لسبب ما -مثل اصدام حافلتهم- حتى يتحول المشروع الى "زومبي"، يعني المشروع يموت!
+عامل الحافلة أدى لظهور ما يسمى بـ  نقاط عامل الحافلة، والي تقدّر عدد الأشخاص الي وجودهم في المشروع عامل أساسي وبدونهم المشروع راح يموت، وما راح يتمكن أحد من انهاء المشروع.
+<br>
+أقل قيمة للنقاط هي 1، والي تعني بأن هناك شخص واحد فالمشروع لو اختفى لسبب ما -ما شرط بحادث، لكن حتى بسبب اجازة-، راح يتوقف المشروع، وهذا يخلينا نعتبر ان النقطة 1 تعتبر:
+<br><br>
+```
+single point of failure
+``` 
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+<br>
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+![nQ5vla14K.avif](https://cdn.hashnode.com/res/hashnode/image/upload/v1648302555255/sAT9OoNYz.avif)
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+حقوق الصورة: xkcd.com/2347
+<br><br>
+مشكلة متجمع PHP
+
+في نهاية عام 2021 تلقى المجتمع اخبار سيئة مفادها أن بعد 10 سنوات من اصلاح عدد لايحصى من الأخطاء البرمجية واضافة الميزات وإصلاح اللغة البرمجية، ترك أحد أبرز المساهمين: " نيكيتا بوبف" المجتمع للعمل على لغة مختلفة تماماً، والتي بالإساس كان جزء منها منذ عدة سنوات. 
+أمر مشابه حصل للبايثون، لكن لغة بي أتش بي كانت المتضرر الأكبر بسبب انخفاض عامل الحافلة!
+من الخروج من هذا المأزق وتحسين الوضع، الشركات المعتمدة على اللغة أنشأت ما يسمى:
+<br>
+<br>
+```
+PHP Foundation
+```
+<br>
+منظمة غير ربحية تهدف لضمان الدعم الطويل للغة.
+
+و أول قرارات المنظمة هي تعيين مطورين جدد للعمل على نواة اللغة، من أجل زيادة عامل الحافلة. وهذه الخطوة من ضمن عدة خطوات قام بها المجتمع من اجل جعل مستقبل اللغة آمن.
+<br><br>
+مشاكل الشركة
+كثير من الشركات التي عملت لديها "كاتب المقالة الأصلي، تجد المقالة في أسفل الترجمة" تعاني بشدة من عامل الحافلة. كثير من فرقهم البرمجية في معظم الوقت وبشكل غير مقصود تقع فيما يسمى "لم يُخترع هُنا" -سأتحدث عنه في مقال لاحق-، والذي يؤدي الى صعوبة الصيانة ومشاكل أخرى.
+غالبًا ما تكون الدرجة المنخفضة لـ عامل الحافلة، جزءًا من وقت النمو السريع عندما يقوم عدد قليل فقط من المطورين بإنشاء معظم الوظائف والميزات التي تصبح فيما بعد جزءاً أساسًيا لمشروع ما ، الأمر الذي يجعل المشروع نفسه معقد بشكل متسارع. تبدأ معظم الشركات خطط توظيف كبيرة خلال فترة هذا النمو ، لكن المشكلة ان عملية التوظيف لا تساهم برفع عامل الحافلة بنفسها.
+<br><br>
+كيف يمكن رفع العامل؟
+جلسات التدريب والبرمجة المزدوجة.
+كل مطور جديد، لازم يحصل على الأقل 30 دقيقة كجلسة برمجة مزدوجة مع مطور سنيور -الأعلى خبرة- في المشروع الذي ينضم له. في الوقت نفسه خلال هذه الجلسة على المطور الجديد ان يقوم بمعظم البرمجة بنفسه، تحت اشراف السنيور الذي يقوم بمراجعة الكود وإعطاء نصائح لتحسينه.
+<br><br>
+عامل الحافلة، هو المعلم!
+لما تعرف منهم "عوامل الحافلة"، لازم تفكر كيف ممكن تنقل المعرفة من عندهم الي جمعوها خلال كل سنين عملهم فالمشروع، المعرفة الي يمتلكوها هي أهم شي فالمشروع. بالتالي لازم تخليهم يركزوا على "التوثيق"، كتابة ملخصات المشروع وطريقة عمله، شرح أجزاء المشروع للمطورين في جلسات معينة على شكل عروض تقديمية، وجود جلسات فردية يشرحوا فيها لزملائهم، وتقليل تركيزهم على البرمجة نفسها.
+<br><br>
+ثقافة مراجعة الأكواد البرمجية
+لما يتم اعتماد ثقافة مراجعة الكود من قبل فريق المطورين لتحسين جودة الكود وعملية المراجعة، فإن النتيجة الي الكثير ما ينتبه لها هي المشاركة المباشرة للمعرفة بين الأشخاص في المشروع. مراجعة الكود ما لازم تكون ك طريقة لاعتماد الكود وخلاص. لازم أنهم يوضحوا سبب القيام بشيء ما بهذه الطريقة ، وليس بطريقة أخرى ، الشي الي راح يؤدي لمناقشات بناءة بين السنيورز والمطورين الآخرين حول ما يمكن القيام به بشكل مختلف ، من منظور السنيورز نفسهم الأكثر خبرة. لازم تكون المراجعات كـمناقشة.
+<br><br>
+التقليل من تعقيد المشاريع
+غالبًا ما تكون مشكلة الشركات سريعة النمو هي نمو تعقيد المشاريع، مما يؤدي إلى انخفاض درجة عامل الحافلة. تتمثل إحدى التقنيات الفعالة في تقليل تعقيد المشاريع عن طريق تقسيمها إلى مشاريع أصغر وأكثر تخصيصًا. هذا يؤدي إلى مستوى دخول أقل -يعني ما تحتاج شخص مستواه عالي عشان يدخل فالمشروع-، واعتماد أسرع، وصيانة أسهل. كل هذه النقاط تسمح بزيادة عامل الحافلة الكلي بشكل فعال للغاية. أكبر مشكلة يجب تجنبها أثناء تقليل تعقيد المشاريع هي إشراك الفرق (حتى الصغيرة منها) دائمًا في إعادة البناء لتجنب خلق نفس المشكلة في المشروع (المشاريع) الفرعية الجديدة.
+<br><br>
+خلط أعضاء الفرق
+قد تكون هذه هي الطريقة الأكثر فاعلية لزيادة درجة عامل الحافلة ، ولكنها أيضًا الأكثر صعوبة وخطورة. تحتاج إلى التخطيط العميق لكل الاحتمالات لمنع فقدان معنويات الفريق. لا تخلط الفريق بالغصب!  ولكن يُقترح على أعضاء الفريق بشكل منتظم ، مثلاً مرة كل نصف سنة ؛ الزملاء فالفريق صعب يغيروا فريقهم كثير، لانهم بيحسوا وكأنهم مازالوا مطورين جدد. إذا تم التخطيط والتنفيذ بشكل جيد ، فستحصل فرقك على خبرة أوسع في مجالات مختلفة ، مع مشاركة المعرفة المكتسبة أثناء العمل مع فرق أخرى.
+<br><br>
+ميزانية التدريب
+يمكن أن يؤدي التخطيط لميزانية خاصة بالتدريب للمطورين إلى زيادة درجة عامل الحافلة، حيث سيجمع الأشخاص نطاقًا أوسع من الخبرة ، ويوسع فريقك ليشمل المزيد من الأشخاص ذوي رتبة سينيور داخل التسلسل الهرمي لشركتك.
+<br><br>
+ملخص
+زيادة نقاط عامل الحافة موضوع ما سهل، ولا رخيص، ولا سريع. هناك حالات لا تريد فيها (أو حتى لا تستطيع) زيادة هذه النتيجة بسهولة، على سبيل المثال عندما يحتوي المشروع على بيانات حساسة ولا يمكنك الوثوق في مطوريك الجدد لبدء التعامل معها. 
+

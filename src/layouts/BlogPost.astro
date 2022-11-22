@@ -18,24 +18,31 @@ const {
 } = Astro.props;
 ---
 
+<!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
 		<BaseHead title={title} description={description} />
 		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-		</style>
-	</head>
+			@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300&display=swap');
 
-	<body>
+			body {
+				font-family: 'Alexandria', sans-serif;
+}
+.title {
+					font-size: 2em;
+					margin: 0.25em 0 0;
+				}
+				hr {
+					border-top: 1px solid #ddd;
+					margin: 1rem 0;
+				}
+			</style>
+			
+	</head>
+	<body class="bg-gray-50">
 		<Header />
-		<main>
+		<main  dir="rtl" style="text-align: right;">
 			<article>
 				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 				<h1 class="title">{title}</h1>
@@ -50,6 +57,7 @@ const {
 				<hr />
 				<slot />
 			</article>
+			
 		</main>
 		<Footer />
 	</body>

@@ -3,47 +3,204 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import img_developer from '../images/developer.png';
+
+//get all posts
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300&display=swap');
+
+			body {
+				font-family: 'Alexandria', sans-serif;
+}
+			</style>
 	</head>
-	<body>
+	<body class="bg-gray-50">
 		<Header title={SITE_TITLE} />
+		<div class="flex justify-end items-center space-x-2 mx-auto relative">
+			<span class="text-xs font-extralight">Light </span>
+			<div>
+				<input type="checkbox" name="" id="checkbox" class="hidden" />
+				<label for="checkbox" class="cursor-pointer">
+				  <div class="w-9 h-5 flex items-center bg-gray-300 rounded-full p2">
+					<div class="w-4 h-4 bg-white rounded-full shadow"></div>
+				  </div>
+				</label>
+			  </div>
+			<span class="text-xs font-semibold">Dark</span>
+		  </div>
+		  
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<h1 class="sm:text-md md:text-3xl py-3">Hello, Welcome to my minimal blog!</h1>
+			<!-- component -->
+<div >
+	<section>
+		<section class="text-gray-600 body-font">
+			<div class="container ">
+				<div class="p-5 bg-white flex items-center mx-auto border-b  mb-10 border-gray-200 rounded-lg sm:flex-row flex-col hover:shadow-md transition ease-in duration-500">
+				<div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center flex-shrink-0">
+					<img
+					  src={img_developer}/>
+				</div>
+				<div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+					<h1 class="text-black text-2xl title-font font-bold mb-2">What I'm working on now?</h1>
+					<p class="leading-relaxed text-base">For two years I had the opportunity to learn serveral web technologies, 
+						and I believe that there is always time to learn and improve</p>
+					<div class="py-4">
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">PHP</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">JavaScript</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">CSS/HTML</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">Tailwind</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">C#</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">AlpineJS</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">SQL</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">WordPress</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">Laravel</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">ASP</p>
+							</div>
+						</div>
+						<div class=" inline-block mr-2" >
+							<div class="flex  pr-2 h-full items-center">
+								<svg class="text-green-500 w-6 h-6 mr-1"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+									<path stroke="none" d="M0 0h24v24H0z"/>  
+									<circle cx="12" cy="12" r="9" />  
+									<path d="M9 12l2 2l4 -4" />
+								</svg>
+								<p class="title-font font-medium">Astro</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</section>
+		<section class="min-h-screen body-font text-gray-600 ">
+			<div class="container mx-auto px-5 py-10">
+			  <div class="-m-4 flex flex-wrap">
+				{
+					posts.map((post) => (
+							
+							 
+								<div class="w-full p-4 md:w-1/2 lg:w-1/4">
+									<a href={post.url} class="relative block h-48 overflow-hidden rounded">
+										<img alt="post_cover" class="block h-full w-full object-cover object-center cursor-pointer" src={post.frontmatter.heroImage} />
+									</a>
+									<div class="mt-4">
+										<h2 class="title-font text-lg font-medium text-gray-900">{post.frontmatter.title}</h2>
+										<p class="mt-1"><time datetime={post.frontmatter.pubDate}>
+											{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+												year: 'numeric',
+												month: 'short',
+												day: 'numeric',
+											})}
+										</time>
+										</p>
+									</div>
+								</div>
+						))
+				}
+			</div>
+		  </section>
+	</section>
+</div>
+			
 		</main>
 		<Footer />
 	</body>
