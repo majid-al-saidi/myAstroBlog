@@ -79,7 +79,7 @@ blockquote {
 	  @apply text-gray-800 dark:text-white transition ease-in duration-500;
 	}
 
-	h1, p , h2, h3, h4, h5, h6 {
+	h1, p , h2, h3, h4, h5, h6, footer {
 		@apply dark_text;
 	  }
   }

@@ -1,64 +1,73 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 export interface Props {
-	content: {
-		title: string;
-		description: string;
-		pubDate?: string;
-		updatedDate?: string;
-		heroImage?: string;
-	};
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+  content: { title, description, pubDate, updatedDate, heroImage },
 } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
-		<BaseHead title={title} description={description} />
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300&display=swap');
+  <head>
+    <BaseHead title={title} description={description} />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300&display=swap");
 
-			body {
-				font-family: 'Alexandria', sans-serif;
-}
-.title {
-					font-size: 2em;
-					margin: 0.25em 0 0;
-				}
-				hr {
-					border-top: 1px solid #ddd;
-					margin: 1rem 0;
-				}
-			</style>
-			
-	</head>
-	<body class="bg-gray-50">
-		<Header />
-		<main  dir="rtl" style="text-align: right;">
-			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="title">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
-				{
-					updatedDate && (
-						<div>
-							Last updated on <time>{updatedDate}</time>
-						</div>
-					)
-				}
-				<hr />
-				<slot />
-			</article>
-			
-		</main>
-		<Footer />
-	</body>
+      body {
+        font-family: "Alexandria", sans-serif;
+      }
+      .title {
+        font-size: 2em;
+        margin: 0.25em 0 0;
+      }
+      hr {
+        border-top: 1px solid #ddd;
+        margin: 1rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="bg-gray-50 dark:bg-slate-700 main_body hover:shadow-md transition ease-in duration-500"
+    >
+      <div class="internal_body">
+        <Header />
+
+        <main dir="rtl" style="text-align: right;">
+          <article>
+            {
+              heroImage && (
+                <img width={480} height={360} src={heroImage} alt="" />
+              )
+            }
+            <h1 class="title">{title}</h1>
+            {pubDate && <time>{pubDate}</time>}
+            {
+              updatedDate && (
+                <div>
+                  Last updated on <time>{updatedDate}</time>
+                </div>
+              )
+            }
+            <hr />
+            <slot />
+          </article>
+        </main>
+        <Footer />
+      </div>
+    </div>
+    <script src="../js/index.js"></script>
+  </body>
 </html>
